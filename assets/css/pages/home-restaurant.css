@@ -248,8 +248,11 @@ Version: 1.0
 
 .bistly-food-item {
   position: relative;
-  text-align: center;
-  padding: 30px 0;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  text-align: left;
+  padding: 24px 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 .bistly-food-item:first-child {
@@ -260,23 +263,49 @@ Version: 1.0
   transition: opacity 0.3s, 1, 0.32, 1, -webkit-transform 0.7scubic-bezier 0.23;
   transition: opacity 0.3s, transform 0.7scubic-bezier 0.23, 1, 0.32, 1;
   transition: opacity 0.3s, transform 0.7scubic-bezier 0.23, 1, 0.32, 1, -webkit-transform 0.7scubic-bezier 0.23;
-  position: absolute;
-  width: 250px;
-  height: 340px;
-  -o-object-fit: cover;
-  object-fit: cover;
-  left: 0;
-  top: 20px;
+  position: relative;
+  width: 120px;
+  height: auto;
+  -o-object-fit: contain;
+  object-fit: contain;
+  left: auto;
+  top: auto;
   z-index: 1;
-  opacity: 0;
-  visibility: hidden;
-  background-size: cover;
+  opacity: 1;
+  visibility: visible;
+  background-size: contain;
   background-repeat: no-repeat;
   pointer-events: none;
+  flex-shrink: 0;
+}
+.bistly-food-item .hover-image img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 @media screen and (max-width: 991.98px) {
+  .bistly-food-item {
+    gap: 14px;
+  }
   .bistly-food-item .hover-image {
-    display: none;
+    display: block !important;
+    width: 90px;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+}
+@media (max-width: 767.98px) {
+  .bistly-food-item {
+    align-items: center;
+  }
+  .bistly-food-item .hover-image {
+    display: block !important;
+    width: 78px;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+  .bistly-food-item .content {
+    flex: 1;
   }
 }
 .bistly-food-item .content h2 {
