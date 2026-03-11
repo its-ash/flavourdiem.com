@@ -40,8 +40,8 @@ Version: 1.0
   --text-color: #2D4443;
   --border-color: #E9E9E9;
   --rating-color: #FF9F1A;
-  --heading-font: "Marcellus", serif;
-  --body-font: "Roboto", sans-serif;
+  --heading-font: "Playfair Display", serif;
+  --body-font: "Lato", sans-serif;
 }
 
 html {
